@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+         body {
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        .register-form {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .form-control {
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid #fff;
+            border-radius: 0;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        .form-control:focus {
+            box-shadow: none;
+            border-color: #ff4081;
+        }
+        .form-check-label {
+            color: #fff;
+        }
+        .btn {
+            background-color: #ff4081;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #e73370;
+        }
+        .bg{
+            background-image: url(bgimg.png);
+            background-repeat: no-repeat;
+
+        }
+        
+    </style>
+</head>
+<body class="bg">
+    <div class="register-form">
+        <h2 > Login Form</h2>
+        <form onsubmit="return validateForm()">
+            <input type="text" class="form-control" id="username" placeholder="Username" required>
+            <input type="email" class="form-control" id="email" placeholder="Email" required>
+            <input type="password" class="form-control" id="password" placeholder="Password" required>
+            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="terms" required>
+                <label class="form-check-label" for="terms">I Agree To The Terms & Conditions</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

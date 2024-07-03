@@ -1,0 +1,32 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+}
+.registration-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+.registration-form .form-group {
+    margin-bottom: 1rem;
+}
+.registration-form .form-check-inline {
+    margin-right: 1rem;
+}
+.registration-form .btn {
+    width: 100%;
+}
+.registration-form .form-check-label {
+    margin-left: 0.3rem;
+}
+.img{
+    background-image: url(image.png);
+    background-size: cover;
+}     
